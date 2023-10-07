@@ -1,0 +1,11 @@
+const route=require('express').Router()
+const {register,login,contacts,profile,logout,deleteContact,updateContact,allData}=require('../controler/controler')
+route.post('/register',register)
+route.post('/login',login)
+route.post('/contact',contacts)
+route.post('/api/profile',profile)
+route.get('/api/logout',logout)
+route.delete('/api/deleteContact/:id',deleteContact)
+route.delete('/api/updateContact/:id',updateContact)
+route.post('/api/fetchAllData',allData)
+module.exports=route
